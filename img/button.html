@@ -9,27 +9,33 @@
         ul {
             list-style: none;
         }
-        button {
-            width: auto;
+        .Button1 {
+            background-image: url("img/profile_re.jpg");
+            background-repeat: no-repeat;
+            width: 650px;
+            height: 160px;
+            margin: 50px 0 50px 0;
             padding: 0;
-            margin: 0;
             border: 0;
-            background: none;
             overflow: visible;
             line-height: 0;
             cursor: pointer;
         }
-         #toggeleMenu{
+         #toggeleMenu1{
              overflow: hidden;
              transition: all 0.5s;
              background-color: #000000;
              opacity: 0.8;
+             font-size: 8pt;
+             text-align: right;
+             margin: 10px 10px 0 5px;
+             line-height: 1.0;
          }
         </style>
     </head>
     <body>
-        <button id="toggleMenuButton"><h2>Profile</h2></button>
-        <div id="toggleMenu">
+        <button class="Button1" id="toggleMenuButton1"><h2>Profile</h2></button>
+        <div id="toggleMenu1">
             <ul>
                 <li>Name  川島 萌衣</li>
                 <li>Birthday  1999.12.29</li>
@@ -40,8 +46,8 @@
         <script>
             'use strict'
             (function(window,document){
-              let _toggleMenuButton = document.getElementById('toggleMenuButton');
-              let _toggleMenu = document.getElementById('toggleMenu');
+              let _toggleMenuButton = document.getElementById('toggleMenuButton1');
+              let _toggleMenu = document.getElementById('toggleMenu1');
               let _clientH;
               init();
              function clickToggle() {
