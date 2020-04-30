@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scal=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>MYNAMEIS.MOE</title>
+        <style type="text/css">
+        ul {
+            list-style: none;
+        }
+        button {
+            width: auto;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            background: none;
+            overflow: visible;
+            line-height: 0;
+            cursor: pointer;
+        }
+         #toggeleMenu{
+             overflow: hidden;
+             transition: all 0.5s;
+             background-color: #000000;
+             opacity: 0.8;
+         }
+        </style>
+    </head>
+    <body>
+        <button id="toggleMenuButton"><h2>Profile</h2></button>
+        <div id="toggleMenu">
+            <ul>
+                <li>Name  川島 萌衣</li>
+                <li>Birthday  1999.12.29</li>
+                <li>Hometown  栃木県</li>
+                <li>Hobby  写真。絵。LIVEに行くこと。</li>
+            </ul>
+        </div>
+        <script>
+            'use strict'
+            (function(window,document){
+              let _toggleMenuButton = document.getElementById('toggleMenuButton');
+              let _toggleMenu = document.getElementById('toggleMenu');
+              let _clientH;
+              init();
+             function clickToggle() {
+                var lasth = _toggleMenu.style.height;
+                _toggleMenu.style.height = (lasth == '' || lasth == '0px') ? _clientH + 'px' : '0px';
+             }
+             function init() {
+                 _toggleMenu.style.height = 'auto';
+                 _clientH = _toggleMenu.clientHeight;
+                 _toggleMenu.style.height = '0px';
+                 _toggleMenuButton.addEventLitener('click',function(){clickToggle();},false);
+             }
+            })(window,document);
+        </script>
+    </body>
+</html>
